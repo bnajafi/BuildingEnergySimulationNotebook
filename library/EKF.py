@@ -50,7 +50,7 @@ class ExtendedKalmanFilter:
         #print(self.P)
         self.S = np.dot(self.H_values, self.P)*self.H_values.T + self.R #Variance of innovation
         #print(np.linalg.det(self.S))
-        #print(self.S)
+        print(self.S)
         self.K = (self.P*self.H_values.T)*np.linalg.inv(self.S)
         #print(self.K)
         #print(np.dot(self.K,self.y))
