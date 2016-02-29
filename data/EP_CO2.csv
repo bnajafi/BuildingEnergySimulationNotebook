@@ -1,4 +1,4 @@
-Date/Time,OAT,OCCU,C38130:Zone Windows Total Transmitted Solar Radiation Energy [J](TimeStep),C38130:Daylighting Reference Point 1 Illuminance [lux](TimeStep),IAT,C38130:Zone Air Heat Balance Surface Convection Rate [W](TimeStep),ZoneCO2,VAV_SYSTEM SUPPLY FAN OUTLET:System Node Temperature [C](TimeStep),VAV_SYSTEM SUPPLY FAN OUTLET:System Node Pressure [Pa](TimeStep),SupplyFlow,SupplyCO2
+Date/Time,OAT,OCCU,Solar,Lux,IAT,C38130:Zone Air Heat Balance Surface Convection Rate [W](TimeStep),ZoneCO2,DAT,VAV_SYSTEM SUPPLY FAN OUTLET:System Node Pressure [Pa](TimeStep),SupplyFlow,SupplyCO2
  06/01  00:05:00,20.698375,0,0,0,21.80066213,179.1913232,420.1451587,12.80014582,99977.5,1.52E-02,420.1389477
  06/01  00:10:00,20.298375,0,0,0,21.75445883,182.8383022,420.1330624,12.80015223,99978.41849,1.52E-02,420.1273818
  06/01  00:15:00,19.898375,0,0,0,21.70119352,187.5547588,420.1219608,12.80016309,99979.33698,1.52E-02,420.1167669
