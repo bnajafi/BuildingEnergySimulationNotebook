@@ -90,7 +90,6 @@ class ExtendedKalmanFilterParameter:
         self.W_values = initialParams
         self.initial_estimates = initialParams
         self.forget = forget
-        
         self.constrained = constrained
         if constraint is None:
             self.constraint = np.ones(self.size)
@@ -125,13 +124,14 @@ class ExtendedKalmanFilterParameter:
             self.K = self.P*(self.Cw_values.T)*np.linalg.inv(self.S)
         #print(self.K)
         self.P *= (np.eye(self.size) - self.K * self.Cw_values)
-        self.W_values += self.K*self.y
+        self.W_values = self.W_values + self.K*self.y
         
         if self.constrained is False:
             return
-        
+        #print(initial_estimates)
         if (self.W_values < 0).any() or (self.W_values > self.constraint).any():
-            res = scipy.optimize.fmin_cobyla(self.target, self.initial_estimates, [self.constr, self.constr2])
+            initial = self.initial_estimates
+            res = scipy.optimize.fmin_cobyla(self.target, initial, [self.constr, self.constr2])
             #print(res)
             self.W_values = res
             #print(self.W_values)
